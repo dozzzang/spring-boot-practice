@@ -23,4 +23,7 @@ public class Member {
     @Column
     private String password;
 
+    public Long getId() {
+        return Id;
+    }
 }
