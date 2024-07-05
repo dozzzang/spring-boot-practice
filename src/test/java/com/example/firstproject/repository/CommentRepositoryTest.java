@@ -68,6 +68,7 @@ CommentRepository commentRepository;
             assertEquals(expected.toString(), comments.toString());
         }
         {   // Case 2 : null의 모든 댓글 조회
+            
             List<Comment> comments = commentRepository.findByNickname(null);
             List<Comment> expected = Arrays.asList();
             assertEquals(comments.toString(),expected.toString());
