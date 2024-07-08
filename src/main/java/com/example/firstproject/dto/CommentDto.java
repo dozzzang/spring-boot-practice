@@ -16,6 +16,19 @@ public class CommentDto {
     }
 
     private Long id;
+
+    public Long getArticleId() {
+        return articleId;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
     private Long articleId;
     private String nickname;
     private String body;
