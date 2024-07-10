@@ -60,10 +60,11 @@ CommentRepository commentRepository;
     void findByNickname() {
         /* Case 1 : "Kim"의 모든 댓글 조회*/
         {
+            String nickname = "Kim";
             List<Comment> comments = commentRepository.findByNickname("Kim");
-            Comment a = new Comment(2L, new Article(4L, "당신의 인생 영화는?", "댓글 고고"), comments, "i am sam");
-            Comment b = new Comment(5L, new Article(5L, "당신의 소울 푸드는?", "댓글 고"), comments, "샤브샤브");
-            Comment c = new Comment(8L, new Article(6L, "당신의 취미는?", "댓글 고고고"), "유튜브 시청");
+            Comment a = new Comment(2L, new Article(4L, "당신의 인생 영화는?", "댓글 고고"),nickname, "i am sam");
+            Comment b = new Comment(5L, new Article(5L, "당신의 소울 푸드는?", "댓글 고"), nickname,"샤브샤브");
+            Comment c = new Comment(8L, new Article(6L, "당신의 취미는?", "댓글 고고고"), nickname,"유튜브 시청");
             List<Comment> expected = Arrays.asList(a, b, c);
             assertEquals(expected.toString(), comments.toString());
         }
